@@ -11,14 +11,17 @@ export default class App extends Component {
   template() {
     return `
       <main data-component="input1"></main> 
-      <div data-component="button"></div> 
+      <input data-component="result" value=${this.$state.a + this.$state.b} />
+      <div data-component="button"></div>
     `;
   }
 
   mounted() {
     const { setInput, sub } = this;
     const $input = this.$target.querySelector('[data-component="input1"]');
+    const $input_result = this.$target.querySelector('[data-component="result"]');
     const $button = this.$target.querySelector('[data-component="button"]');
+    new Input($input, { $state: this.$state, setInput: setInput.bind(this) });
     new Input($input, { $state: this.$state, setInput: setInput.bind(this) });
   }
 
