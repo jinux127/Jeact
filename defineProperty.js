@@ -28,11 +28,11 @@ const observable = (obj) => {
 
 const state = observable({ a: 10, b: 20 });
 
-observe(() => console.log(`a = ${상태.a}`));
-observe(() => console.log(`b = ${상태.b}`));
-observe(() => console.log(`a + b = ${상태.a} + ${상태.b}`));
-observe(() => console.log(`a * b = ${상태.a} + ${상태.b}`));
-observe(() => console.log(`a - b = ${상태.a} + ${상태.b}`));
+observe(() => console.log(`a = ${state.a}`));
+observe(() => console.log(`b = ${state.b}`));
+observe(() => console.log(`a + b = ${state.a} + ${state.b}`));
+observe(() => console.log(`a * b = ${state.a} + ${state.b}`));
+observe(() => console.log(`a - b = ${state.a} + ${state.b}`));
 
 state.a = 100;
 state.b = 200;
